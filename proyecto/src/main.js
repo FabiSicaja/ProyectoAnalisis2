@@ -1,10 +1,12 @@
-import Vue from 'vue'
 import { createApp } from 'vue'
 import App from './App.vue'
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+// import router from './router'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
+loadFonts()
 
-createApp(App).mount('#app')
-
-Vue.use(Buefy)
+createApp(App)
+//   .use(router)
+  .use(vuetify)
+  .mount('#app')
